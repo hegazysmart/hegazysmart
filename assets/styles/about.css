@@ -1,0 +1,75 @@
+ /* Page-specific styles */
+ .about-banner {
+     margin-top: 70px;
+     background: linear-gradient(to right, #00235d, #3797fe);
+     color: white;
+     padding: 60px 20px;
+     text-align: center;
+ }
+
+ .about-banner h1 {
+     font-size: 2.5rem;
+     margin-bottom: 20px;
+ }
+
+ .about-banner p {
+     font-size: 1.2rem;
+ }
+
+ .about-section {
+     padding: 40px 20px;
+     line-height: 1.8;
+ }
+
+ .about-section h2 {
+     font-size: 2rem;
+     margin-bottom: 20px;
+     position: relative;
+     display: inline-block;
+ }
+
+ .about-section h2::after {
+     content: "";
+     position: absolute;
+     width: 50px;
+     height: 4px;
+     background-color: #00bcd4;
+     bottom: -10px;
+     left: 0;
+ }
+
+ .services {
+     background: #E7ECEF;
+     padding: 40px 20px;
+ }
+
+ .service-card {
+     background: white;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
+     padding: 20px;
+     text-align: center;
+     transition: transform 0.3s ease;
+ }
+
+ .service-card:hover {
+     transform: translateY(-10px);
+ }
+
+ .service-card i {
+     font-size: 2rem;
+     color: #007bff;
+     margin-bottom: 15px;
+ }
+
+ .team {
+     padding: 40px 20px;
+     text-align: center;
+ }
+
+ .team img {
+     border-radius: 50%;
+     width: 150px;
+     height: 150px;
+     margin-bottom: 10px;
+ }

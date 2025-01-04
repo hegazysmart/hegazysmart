@@ -1,30 +1,31 @@
-//JSON structure for navbar
+//JSON structure for navbar "Oyoon El-Salsabeel Marines"
 const navbarConfig = {
     logo: {
-        src: "./assets/images/logo/blue/logo-blue.png",
+        src: "./assets/images/logo/blue/full-logo.png",
         alt: "O.S.M",
-        title: "O.S.M",
-        subtitle: "Oyoon El-Salsabeel Marines",
+        title: "",
+        subtitle: "",
         link: "./index.html",
     },
     menu: [
         {
-            text: "Categories",
+            text: "Activities",
             link: "./categories.html",
             dropdown: [
-                { text: "Fiction", link: "./fiction.html" },
-                { text: "Non-fiction", link: "./non-fiction.html" },
-                { text: "Science", link: "./science.html" },
+                { text: "Diving", link: "#moodboard", icon: "./assets/images/icons/icons8-dynamic-links.svg" },
+                { text: "Searching", link: "#Searching", icon: "./assets/images/icons/icons8-dynamic-links.svg" },
+                { text: "Teaching", link: "#Searching", icon: "./assets/images/icons/icons8-dynamic-links.svg" },
             ],
         },
+        { text: "Clients", link: "#Clients" },
         { text: "About", link: "./about.html" },
     ],
     profile: {
-        imageSrc: "./assets/images/profile.png",
+        imageSrc: "./assets/images/icons/icons8-dynamic-links.svg",
         dropdown: [
-            { text: "Login", link: "./login.html" },
-            { text: "Register", link: "./register.html" },
-            { text: "Logout", link: "./logout.html" },
+            { text: "Facebook", link: "#", icon: "./assets/images/icons/icons8-dynamic-links.svg" },
+            { text: "instagram", link: "#", icon: "./assets/images/icons/icons8-dynamic-links.svg" },
+            { text: "Tik-Tok", link: "#", icon: "./assets/images/icons/icons8-dynamic-links.svg" },
         ],
     },
 };
@@ -32,7 +33,7 @@ const navbarConfig = {
 //render the navbar dynamically
 function generateNavbar(config) {
     const navbar = document.createElement("nav");
-    navbar.className = "navbar navbar-expand-md navbar-light bg-light";
+    navbar.className = "navbar navbar-expand-md navbar-light";
 
     navbar.innerHTML = `
       <div class="container-fluid">
@@ -52,7 +53,7 @@ function generateNavbar(config) {
           <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="${config.profile.imageSrc}" width="40px;" alt="profile">
+              <img src="${config.profile.imageSrc}" width="40px;" alt="profile"></img>
             </a>
             <ul class="dropdown-menu end-0" aria-labelledby="navbarDropdownMenuLink">
               ${generateDropdownItems(config.profile.dropdown)}
@@ -61,6 +62,7 @@ function generateNavbar(config) {
         </div>
       </div>
     `;
+    // <img src="${config.profile.imageSrc}" width="40px;" alt="profile"></img>
 
     document.body.prepend(navbar); // Insert the navbar at the top of the body
 }
@@ -86,7 +88,10 @@ function generateMenuItems(menu) {
 }
 
 function generateDropdownItems(items) {
-    return items.map(item => `<li><a class="dropdown-item" href="${item.link}">${item.text}</a></li>`).join("");
+    return items.map(item => `<li><a class="dropdown-item" href="${item.link}">
+        <img src="${item.icon}" width="40px;" alt="profile"></img>
+        ${item.text}
+        </a></li>`).join("");
 }
 
 // Call the function to render the navbar
