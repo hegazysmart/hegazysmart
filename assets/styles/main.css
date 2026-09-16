@@ -129,7 +129,7 @@ img {
 }
 
 .site-nav a {
-    padding: 8px 13px;
+    padding: 8px 10px;
     border-radius: 999px;
     color: var(--muted);
     font-size: 0.92rem;
@@ -172,7 +172,7 @@ img {
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
     gap: clamp(2rem, 6vw, 5rem);
-    align-items: center;
+    align-items: start;
     padding-top: 64px;
 }
 
@@ -195,16 +195,16 @@ p {
 h1 {
     max-width: 900px;
     margin-bottom: 28px;
-    font-size: clamp(3.8rem, 7.5vw, 6.4rem);
-    line-height: 0.86;
+    font-size: clamp(2.75rem, 4.4vw, 4rem);
+    line-height: 0.96;
     letter-spacing: 0;
     text-wrap: balance;
 }
 
 h2 {
     margin-bottom: 0;
-    font-size: clamp(2.3rem, 5.2vw, 4.8rem);
-    line-height: 0.97;
+    font-size: clamp(1.9rem, 3.4vw, 3rem);
+    line-height: 1;
     letter-spacing: 0;
     text-wrap: balance;
 }
@@ -226,8 +226,8 @@ h3 {
 
 .hero-lede {
     max-width: 720px;
-    margin-bottom: 34px;
-    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    margin-bottom: 3rem;
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
 }
 
 .hero-actions {
@@ -283,7 +283,7 @@ h3 {
     top: 18px;
     right: -18px;
     color: rgba(255, 255, 255, 0.05);
-    font-size: 4.7rem;
+    font-size: 3.6rem;
     font-weight: 950;
     line-height: 1;
     writing-mode: vertical-rl;
@@ -364,7 +364,7 @@ h3 {
 
 .marquee-track span {
     color: var(--ink);
-    font-size: clamp(1.05rem, 2vw, 1.8rem);
+    font-size: clamp(0.95rem, 1.5vw, 1.35rem);
     font-weight: 900;
     text-transform: uppercase;
     white-space: nowrap;
@@ -380,7 +380,7 @@ h3 {
     display: grid;
     gap: 18px;
     align-self: end;
-    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
 }
 
 .section-heading {
@@ -418,8 +418,8 @@ h3 {
 }
 
 .project-card h3 {
-    font-size: clamp(1.8rem, 4vw, 4.4rem);
-    line-height: 0.95;
+    font-size: clamp(1.4rem, 2.5vw, 2.4rem);
+    line-height: 1;
     transition: color 180ms ease;
 }
 
@@ -676,11 +676,11 @@ h3 {
     }
 
     h1 {
-        font-size: clamp(3.2rem, 17vw, 5.4rem);
+        font-size: clamp(2.35rem, 11vw, 3.4rem);
     }
 
     h2 {
-        font-size: clamp(2.05rem, 12vw, 3.4rem);
+        font-size: clamp(1.8rem, 8.5vw, 2.5rem);
     }
 
     .hero-panel,
